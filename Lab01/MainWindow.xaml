@@ -23,13 +23,15 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Grid.Column="1" Margin="20" Orientation="Vertical">
-            <Image Name="AvatarImage"  Height="100" Width="100" />
-            <Button Name = "addAvatarButton" Content="Select Image" RenderTransformOrigin="0.514,3.58" Click="AddAvatarButton_Click"/>
+            <Image Name="AvatarImage"  Height="140"  Source="avatar.png" />
+            <Button Name = "addAvatarButton" Content="Select Image" RenderTransformOrigin="0.514,3.58" Width="100" Margin="0 10 0 0" Click="AddAvatarButton_Click"/>
             <TextBlock TextWrapping="Wrap" Text="Name"/>
             <TextBox Name ="nameTextBox" Height="23" TextWrapping="Wrap" Text="Jarosław" Margin="0,0,0,10"/>
             <TextBlock TextWrapping="Wrap" Text="Age"/>
             <TextBox Name="ageTextBox" Height="23" TextWrapping="Wrap" Text="99"  Margin="0,0,0,10"/>
+            
             <Button Name = "addNewPersonButton" Content="Add new person" Click="AddNewPersonButton_Click" RenderTransformOrigin="0.514,3.58"/>
+            
         </StackPanel>
     </Grid>
 </Window>
