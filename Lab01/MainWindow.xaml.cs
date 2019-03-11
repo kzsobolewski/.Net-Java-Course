@@ -24,7 +24,7 @@ namespace Lab01
     {
         ObservableCollection<Person> people = new ObservableCollection<Person>
         {
-           // new Person { Name = "P1", Age = 1 },
+            new Person { Name = "P1", Age = 1 , AvatarUri="avatar.png"},
         };
 
         public ObservableCollection<Person> Items
@@ -40,7 +40,12 @@ namespace Lab01
         
         private void AddNewPersonButton_Click(object sender, RoutedEventArgs e)
         {
-            people.Add(new Person { Age = int.Parse(ageTextBox.Text), Name = nameTextBox.Text, AvatarUri = AvatarImage.Source.ToString() });
+            if(AvatarImage.Source != null &&
+                ageTextBox.Text != "" &&
+                nameTextBox.Text != "" )
+                people.Add(new Person { Age = int.Parse(ageTextBox.Text), Name = nameTextBox.Text, AvatarUri = AvatarImage.Source.ToString() });
+             else
+                MessageBox.Show("Please fill out all required fields");
         }
 
         private void AddAvatarButton_Click(object sender, RoutedEventArgs e)
