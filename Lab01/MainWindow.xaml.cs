@@ -24,8 +24,7 @@ namespace Lab01
     {
         ObservableCollection<Person> people = new ObservableCollection<Person>
         {
-            new Person { Name = "P1", Age = 1 },
-            new Person { Name = "P2", Age = 2 }
+           // new Person { Name = "P1", Age = 1 },
         };
 
         public ObservableCollection<Person> Items
@@ -41,7 +40,23 @@ namespace Lab01
         
         private void AddNewPersonButton_Click(object sender, RoutedEventArgs e)
         {
-            people.Add(new Person { Age = int.Parse(ageTextBox.Text), Name = nameTextBox.Text });
+            people.Add(new Person { Age = int.Parse(ageTextBox.Text), Name = nameTextBox.Text, AvatarUri = AvatarImage.Source.ToString() });
         }
+
+        private void AddAvatarButton_Click(object sender, RoutedEventArgs e)
+        
+            {
+                OpenFileDialog op = new OpenFileDialog();
+                op.Title = "Select a picture";
+                op.Filter = "All supported graphics|*.jpg;*.jpeg;*.png|" +
+                  "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" +
+                  "Portable Network Graphic (*.png)|*.png";
+                if (op.ShowDialog() == true)
+                {
+                    AvatarImage.Source = new BitmapImage(new Uri(op.FileName));
+                }
+
+            }
+          
     }
 }
