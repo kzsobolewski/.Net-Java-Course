@@ -24,9 +24,9 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <StackPanel Grid.Column="1" Margin="20" Orientation="Vertical">
-            <TextBlock Name ="status_TextBlock" Height="23" TextWrapping="Wrap" />
-
             <Button Name = "downloadJson" Content="Download" Click="DownloadJsonButton_Click" RenderTransformOrigin="0.514,3.58"/>
+            <TextBlock  Name ="status_TextBlock" Height="200"  TextWrapping="Wrap" />
+
             <fa:ImageAwesome Name="loading_spinner" Icon="Spinner" Margin="0 15 0 0" Height="40" Width="40" Spin="True" SpinDuration="2" Visibility="Hidden"/>
         </StackPanel>
     </Grid>

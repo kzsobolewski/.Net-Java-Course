@@ -37,35 +37,36 @@ namespace Lab02_parser
             DataContext = this;
         }
 
- 
         private async void DownloadJsonButton_Click(object sender, RoutedEventArgs e)
         {
             loading_spinner.Visibility = Visibility.Visible;
             status_TextBlock.Text = "Loading...";
 
+            // https://en.wikipedia.org/w/api.php?format=json&action=query&generator=random&prop=images&grnnamespace=0
             var url = "http://api.icndb.com/jokes/random";
             var urlImg = "https://some-random-api.ml/dogimg";
+            try
+            {
+                HttpResponseMessage res = await client.GetAsync(url);
+                res.EnsureSuccessStatusCode();
+                string responseBody = await res.Content.ReadAsStringAsync();
+                JObject json = JObject.Parse(responseBody);
 
-            HttpResponseMessage res = await client.GetAsync(url);
-            res.EnsureSuccessStatusCode();
-            string responseBody = await res.Content.ReadAsStringAsync();
-            JObject json = JObject.Parse(responseBody);
+                HttpResponseMessage resImg = await client.GetAsync(urlImg);
+                resImg.EnsureSuccessStatusCode();
+                string responseBodyImg = await resImg.Content.ReadAsStringAsync();
+                JObject jsonImg = JObject.Parse(responseBodyImg);
+                string parsed_joke = (string)json["value"]["joke"];
+                int parsed_number = (int)json["value"]["id"];
+                string parsed_image_url = (string)jsonImg["link"];
 
-            HttpResponseMessage resImg = await client.GetAsync(urlImg);
-            resImg.EnsureSuccessStatusCode();
-            string responseBodyImg = await resImg.Content.ReadAsStringAsync();
-            JObject jsonImg = JObject.Parse(responseBodyImg);
-
-            string parsed_joke = (string)json["value"]["joke"];
-            int parsed_number = (int)json["value"]["id"];
-            string parsed_image_url = (string)jsonImg["link"];
-
-
-            items.Add(new Element { Text = parsed_joke, Number = parsed_number, ImageUrl = parsed_image_url });
-
-            loading_spinner.Visibility = Visibility.Hidden;
-            status_TextBlock.Text = "Done.";
-            
+                items.Add(new Element { Text = parsed_joke, Number = parsed_number, ImageUrl = parsed_image_url });
+                loading_spinner.Visibility = Visibility.Hidden;
+                status_TextBlock.Text = "Done.";
+            } catch(Exception err) {
+                loading_spinner.Visibility = Visibility.Hidden;
+                status_TextBlock.Text = "Error: "+ err;
+            }
         }
     }
 }
