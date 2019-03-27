@@ -25,9 +25,25 @@
         </ListBox>
         <StackPanel Grid.Column="1" Margin="20" Orientation="Vertical">
             <Button Name = "downloadJson" Content="Download" Click="DownloadJsonButton_Click" RenderTransformOrigin="0.514,3.58"/>
-            <TextBlock  Name ="status_TextBlock" Height="200"  TextWrapping="Wrap" />
-
+            <TextBlock  Name ="status_TextBlock" Height="100"  TextWrapping="Wrap" />
             <fa:ImageAwesome Name="loading_spinner" Icon="Spinner" Margin="0 15 0 0" Height="40" Width="40" Spin="True" SpinDuration="2" Visibility="Hidden"/>
+            <TextBlock Name="progressTextBlock" Height="30" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch"/>
+            <ProgressBar x:Name="DataProgressBar" Height="20"/>
+            <Grid Height="50" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="Entry Number" Grid.Column="0" Grid.Row="0" Margin ="0" VerticalAlignment="Center"></TextBlock>
+                <TextBox Name="NumberTextBox" Text="1" Margin ="0" Grid.Column="0" Grid.Row="1" VerticalAlignment="Center"></TextBox>
+                <Button Name="Download_PackOfData_Button" Content="Download pack of data"
+                        Grid.Column="1" Grid.Row="0" Click="LoadPackofData_Click"/>
+                <Button Content="CANCEL" Grid.Column="1" Grid.Row="1" Click="Cancel_Click"/>
+            </Grid>
         </StackPanel>
     </Grid>
 </Window>
