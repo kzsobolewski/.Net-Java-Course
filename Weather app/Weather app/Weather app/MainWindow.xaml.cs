@@ -76,14 +76,14 @@ namespace Weather_app
             bool result_date = regex.IsMatch(DataTextBox.Text.Trim());
             if (result_date == false || DataTextBox.Text.Length == 0)
             {
-                MessageBox.Show("Invalid Date.Try again",
+                MessageBox.Show("Invalid Date. Expecting \"Day-Month-Year\" format. ",
                 "Info",
                 MessageBoxButton.OK,
                 MessageBoxImage.Information);
             }
             else
             {
-                new_Date = DateTime.Parse(DataTextBox.Text);
+                new_Date = Convert.ToDateTime(DataTextBox.Text);
             }
             float parsedValue;
             bool result_temperature = float.TryParse(TemperaturaTextBox.Text, out parsedValue);
@@ -97,18 +97,13 @@ namespace Weather_app
             else
             {
                 new_Temp = parsedValue;
+
+            }
+            if((result_date && result_temperature)==true)
+            {
                 var weatherdata = new WeatherData(new_City, new_Date, new_Temp);
                 items.Add(weatherdata);
             }
-
-
-        
-
-
-
-            
-            
-
         }
 
         private void DataTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -121,12 +116,12 @@ namespace Weather_app
 
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Download_weather_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void Pobierz_Click(object sender, RoutedEventArgs e)
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

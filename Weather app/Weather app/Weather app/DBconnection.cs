@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Weather_app
 {
-    class Class1
+    public class DBconnection
     {
     }
 }

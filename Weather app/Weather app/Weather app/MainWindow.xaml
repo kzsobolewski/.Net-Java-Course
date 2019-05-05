@@ -35,7 +35,8 @@
             </ComboBox>
 
         </Grid>
-        <Button x:Name="Pobierz" Content="Download weather" HorizontalAlignment="Left" Height="22" Margin="386,127,0,0" VerticalAlignment="Top" Width="167" Click="Pobierz_Click"/>
+        <Button x:Name="download_weather_button" Content="Download weather" HorizontalAlignment="Left" Height="22" 
+                Margin="386,127,0,0" VerticalAlignment="Top" Width="167" Click="Download_weather_Click"/>
 
     </Grid>
 </Window>
