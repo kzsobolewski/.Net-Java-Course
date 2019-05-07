@@ -10,20 +10,18 @@ namespace Weather_app.Model
     public class WeatherData
     {
         [Key]
-        public int Id { get; set; }
-
+        private int Id { get; set; }
+         
         public string City { get; set; }
         public DateTime Time { get; set; }
         public float Temperature { get; set; }
 
-        public WeatherData(){}
 
-
-        public WeatherData(String city,DateTime time, float temp)
+        public WeatherData(String city="unknown",DateTime time = new DateTime() , float temp = 0)
         {
-            City = city;
-            Time = time;
-            Temperature = temp;
+            this.City = city;
+            this.Time = time;
+            this.Temperature = temp;
         }
     }
 }

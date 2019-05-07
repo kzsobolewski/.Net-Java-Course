@@ -10,10 +10,10 @@ namespace Weather_app.Model
 {
     public class WeatherDataDB : DbContext
     {
-        public WeatherDataDB(): base("DefaultConnection")
-        {
-            Database.Initialize(false);
-        }
+        //public WeatherDataDB(): base("DefaultConnection")
+        //{
+        //    Database.Initialize(true);
+        //}
 
         public DbSet<WeatherData> WeatherDatas { get; set; }
     }

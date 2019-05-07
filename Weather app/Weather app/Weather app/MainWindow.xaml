@@ -19,8 +19,8 @@
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Path=City}" Margin="3" Width="55"/>
-                            <TextBlock Text="{Binding Path=Time}"  Width="90" MaxHeight="60" TextWrapping="Wrap"  />
-                            <TextBlock Text="{Binding Path=Temperature}"  Margin="0" MaxWidth="20" MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Time}"  Width="90" TextWrapping="Wrap"  />
+                            <TextBlock Text="{Binding Path=Temperature}"  Margin="0"  MaxHeight="30"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -32,11 +32,13 @@
                 <ComboBoxItem Content="Moscow"></ComboBoxItem>
                 <ComboBoxItem Content="Prague"></ComboBoxItem>
                 <ComboBoxItem Content="Vienn"></ComboBoxItem>
+                <ComboBoxItem Content="Void"></ComboBoxItem>
             </ComboBox>
 
         </Grid>
         <Button x:Name="download_weather_button" Content="Download weather" HorizontalAlignment="Left" Height="22" 
                 Margin="386,127,0,0" VerticalAlignment="Top" Width="167" Click="Download_weather_Click"/>
+        <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="82" Margin="27,317,0,0" TextWrapping="Wrap" Text="Log: " VerticalAlignment="Top" Width="305"/>
 
     </Grid>
 </Window>

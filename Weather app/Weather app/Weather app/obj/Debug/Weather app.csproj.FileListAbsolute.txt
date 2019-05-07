@@ -1,0 +1,46 @@
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\bin\Debug\Weather app.exe.config
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\bin\Debug\Weather app.exe
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\bin\Debug\Weather app.pdb
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\bin\Debug\EntityFramework.dll
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\bin\Debug\EntityFramework.xml
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app.csprojAssemblyReference.cache
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\MainWindow.g.cs
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\App.g.cs
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app_MarkupCompile.cache
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app_MarkupCompile.lref
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\MainWindow.baml
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app.g.resources
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather_app.Properties.Resources.resources
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app.csproj.GenerateResource.cache
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app.csproj.CoreCompileInputs.cache
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app.csproj.CopyComplete
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app.exe
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather app.pdb
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather_app.Migrations.WeatherDataDB.resources
+C:\Users\szwaw\OneDrive\Dokumenty\platformy\Weather app\Weather app\Weather app\obj\Debug\Weather_app.Migrations.secondMigration.resources
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\Weather app.exe.config
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\Weather app.exe
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\Weather app.pdb
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\EntityFramework.dll
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\EntityFramework.xml
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\MainWindow.g.cs
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\App.g.cs
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app_MarkupCompile.cache
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app_MarkupCompile.lref
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\MainWindow.baml
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app.g.resources
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather_app.Migrations.WeatherDataDB.resources
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather_app.Migrations.secondMigration.resources
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather_app.Properties.Resources.resources
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app.csproj.GenerateResource.cache
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app.csproj.CoreCompileInputs.cache
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app.csproj.CopyComplete
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app.exe
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app.pdb
+C:\Users\Sobol\Desktop\Weather app\Weather app\obj\Debug\Weather app.csprojAssemblyReference.cache
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Sobol\Desktop\Weather app\Weather app\bin\Debug\Newtonsoft.Json.xml
