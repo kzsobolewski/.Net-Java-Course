@@ -9,11 +9,11 @@
     <Grid Margin="0,9,-0.4,-9">
         <Grid HorizontalAlignment="Left" Height="400" Margin="386,10,0,0" VerticalAlignment="Top" Width="396">
             <Label Content="City" HorizontalAlignment="Left" Height="27" Margin="0,86,0,0" VerticalAlignment="Top" Width="75"/>
-            <Label Content="Date" HorizontalAlignment="Left" Height="27" Margin="0,149,0,0" VerticalAlignment="Top" Width="75"/>
-            <Label Content="Temperature" HorizontalAlignment="Left" Height="27" Margin="0,176,0,0" VerticalAlignment="Top" Width="75"/>
-            <TextBox x:Name="DataTextBox" HorizontalAlignment="Left" Height="27" Margin="80,150,0,0" TextWrapping="Wrap" Text="07-05-2019" VerticalAlignment="Top" Width="86" TextChanged="DataTextBox_TextChanged"/>
-            <TextBox x:Name="TemperaturaTextBox" HorizontalAlignment="Left" Height="27" Margin="80,176,0,0" TextWrapping="Wrap" Text="25,99" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.318,-0.511" TextChanged="TemperaturaTextBox_TextChanged"/>
-            <Button x:Name="Add_Forecast" Content="Add forecast" HorizontalAlignment="Left" Height="22" Margin="0,208,0,0" VerticalAlignment="Top" Width="166" Click="Add_forecast_Click"/>
+            <Label Content="Date" HorizontalAlignment="Left" Height="27" Margin="0,145,0,0" VerticalAlignment="Top" Width="75"/>
+            <Label Content="Temperature" HorizontalAlignment="Left" Height="27" Margin="0,199,0,0" VerticalAlignment="Top" Width="75"/>
+            <TextBox x:Name="DataTextBox" HorizontalAlignment="Left" Height="27" Margin="80,147,0,0" TextWrapping="Wrap" Text="07-05-2019" VerticalAlignment="Top" Width="86" TextChanged="DataTextBox_TextChanged"/>
+            <TextBox x:Name="TemperaturaTextBox" HorizontalAlignment="Left" Height="27" Margin="80,199,0,0" TextWrapping="Wrap" Text="25,99" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.318,-0.511" TextChanged="TemperaturaTextBox_TextChanged"/>
+            <Button x:Name="Add_Forecast" Content="Add forecast" HorizontalAlignment="Left" Height="22" Margin="0,236,0,0" VerticalAlignment="Top" Width="166" Click="Add_forecast_Click"/>
             <ListBox HorizontalAlignment="Left" Height="379" Margin="180,11,0,0" VerticalAlignment="Top" Width="206" ItemsSource="{Binding Items}" SelectionChanged="ListBox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -38,6 +38,8 @@
                 <ComboBoxItem Content="London"></ComboBoxItem>
                 <ComboBoxItem Content="Void"></ComboBoxItem>
             </ComboBox>
+            <Label Content="Time" HorizontalAlignment="Left" Height="27" Margin="0,172,0,0" VerticalAlignment="Top" Width="75"/>
+            <TextBox x:Name="Hours_DataTextbox"  HorizontalAlignment="Left" Height="27" Margin="80,172,0,0" TextWrapping="Wrap" Text="14:30" VerticalAlignment="Top" Width="86" TextChanged="DataTextBox_TextChanged"/>
 
         </Grid>
         <Button x:Name="download_weather_button" Content="Download weather" HorizontalAlignment="Left" Height="22" 

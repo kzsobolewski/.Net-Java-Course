@@ -29,14 +29,13 @@ namespace Weather_app
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        DBconnection dBconnection = new DBconnection();
         ObservableCollection<WeatherData> items = new ObservableCollection<WeatherData> { };
         public ObservableCollection<WeatherData> Items
         {
             get => items;
         }
 
-        DBconnection dBconnection = new DBconnection();
         public MainWindow()
         {
             InitializeComponent();
@@ -46,46 +45,9 @@ namespace Weather_app
 
         }
 
-
-        private void Add_forecast_Click(object sender, RoutedEventArgs e)
+        private async void Add_forecast_Click(object sender, RoutedEventArgs e)
         {
-            string new_City = CitisComboBox.Text;
-            float new_Temp = 0;
-            DateTime new_Date = new DateTime(00 - 00 - 0000);
-
-            Regex regex = new Regex(@"(((0|1)[0-9]|2[0-9]|3[0-1])-(0[1-9]|1[0-2])-((19|20)\d\d))$");
-            bool result_date = regex.IsMatch(DataTextBox.Text.Trim());
-            if (result_date == false || DataTextBox.Text.Length == 0)
-            {
-                MessageBox.Show("Invalid Date. Expecting \"Day-Month-Year\" format. ",
-                "Info",
-                MessageBoxButton.OK,
-                MessageBoxImage.Information);
-            }
-            else
-            {
-                new_Date = Convert.ToDateTime(DataTextBox.Text);
-            }
-            float parsedValue;
-            bool result_temperature = float.TryParse(TemperaturaTextBox.Text, out parsedValue);
-            if (result_temperature == false || TemperaturaTextBox.Text.Length == 0)
-            {
-                MessageBox.Show("Invalid Temperature. Try again",
-                "Info",
-                MessageBoxButton.OK,
-                MessageBoxImage.Information);
-            }
-            else
-            {
-                new_Temp = parsedValue;
-
-            }
-            if((result_date && result_temperature)==true)
-            {
-                var weatherdata = new WeatherData(new_City, new_Date, new_Temp,123,4,7);
-                dBconnection.add_to_DB(weatherdata);
-                synchronize(dBconnection);
-            }
+            add_own_forecast();
         }
 
         private void DataTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -179,6 +141,64 @@ namespace Weather_app
                 items.Add(WeatherData);
             }
 
+        }
+        // Add forecast Click
+        private void add_own_forecast()
+        {
+            string new_City = CitisComboBox.Text;
+            float new_Temp = 0;
+            DateTime new_Date = DateTime.Now;
+
+            Regex regex = new Regex(@"(((0|1)[0-9]|2[0-9]|3[0-1])-(0[1-9]|1[0-2])-((19|20)\d\d))$");
+            bool result_date = regex.IsMatch(DataTextBox.Text.Trim());
+            Regex regex_hours = new Regex(@"((0|1)[0-9]|2[0-4]):([0-5][0-9])$");
+            bool result_hour = regex_hours.IsMatch(Hours_DataTextbox.Text.Trim());
+            if (result_date == false || DataTextBox.Text.Length == 0)
+            {
+                MessageBox.Show("Invalid Date. Expecting \"Day-Month-Year\" format. ",
+                "Info",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+            }
+            else
+            {
+                if (result_hour == false || DataTextBox.Text.Length == 0)
+                {
+                    MessageBox.Show("Invalid Time. Expecting \"Hour:Minute\" format. ",
+                    "Info",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+
+                }
+                else
+                {
+
+                    new_Date = DateTime.Parse(DataTextBox.Text);
+                    DateTime hours = DateTime.Parse(Hours_DataTextbox.Text);
+                    new_Date = new DateTime(new_Date.Year, new_Date.Month, new_Date.Day, hours.Hour, hours.Minute, 0);
+                }
+
+            }
+            float parsedValue;
+            bool result_temperature = float.TryParse(TemperaturaTextBox.Text, out parsedValue);
+            if (result_temperature == false || TemperaturaTextBox.Text.Length == 0)
+            {
+                MessageBox.Show("Invalid Temperature. Try again",
+                "Info",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+            }
+            else
+            {
+                new_Temp = parsedValue;
+
+            }
+            if ((result_date && result_temperature) == true)
+            {
+                var weatherdata = new WeatherData(new_City, new_Date, new_Temp, 0, 0, 0);
+                dBconnection.add_to_DB(weatherdata);
+                synchronize(dBconnection);
+            }
         }
     }
 
