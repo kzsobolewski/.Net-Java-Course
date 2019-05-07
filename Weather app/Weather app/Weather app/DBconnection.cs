@@ -14,7 +14,8 @@ namespace Weather_app
 
         public void add_to_DB(Model.WeatherData data)
         {
-            var forecast = new Model.WeatherData() { City = data.City, Time = data.Time, Temperature = data.Temperature };
+            var forecast = new Model.WeatherData() { City = data.City, Time = data.Time, Temperature = data.Temperature, Humidity = data.Humidity,
+                                                    Pressure=data.Pressure, Windspeed=data.Windspeed};
 
             Weather_Data_Base.WeatherDatas.Add(forecast);
             Weather_Data_Base.SaveChanges();

@@ -20,10 +20,10 @@
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Path=City}" Margin="3" Width="55"/>
                             <TextBlock Text="{Binding Path=Time}"  Width="80" TextWrapping="Wrap"  />
-                            <TextBlock Text="{Binding Path=Temperature}"  Margin="0"  MaxHeight="30"/>
-                            <TextBlock Text="{Binding Path=Humidity}"  Margin="3"  Width="50" MaxHeight="30"/>
-                            <TextBlock Text="{Binding Path=Pressure}"  Margin="3"  Width="50" MaxHeight="30"/>
-                            <TextBlock Text="{Binding Path=Windspeed}"  Margin="3" Width="50" MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Temperature}"  Margin="3" Width="40"  MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Humidity}"  Margin="3"  Width="40" MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Pressure}"  Margin="3"  Width="40" MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Windspeed}"  Margin="3" Width="40" MaxHeight="30"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
