@@ -10,9 +10,14 @@ namespace Weather_app.Model
 {
     public class WeatherDataDB : DbContext
     {
-        public WeatherDataDB(): base("DefaultConnection")
+        public WeatherDataDB() : base("WeatherDataDB")
         {
-            Database.Initialize(false);
+            Database.SetInitializer<WeatherDataDB>(new CreateDatabaseIfNotExists<WeatherDataDB>());
+        }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<WeatherData> WeatherDatas { get; set; }

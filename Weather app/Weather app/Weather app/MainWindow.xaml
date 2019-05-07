@@ -12,15 +12,18 @@
             <Label Content="Date" HorizontalAlignment="Left" Height="27" Margin="0,149,0,0" VerticalAlignment="Top" Width="75"/>
             <Label Content="Temperature" HorizontalAlignment="Left" Height="27" Margin="0,176,0,0" VerticalAlignment="Top" Width="75"/>
             <TextBox x:Name="DataTextBox" HorizontalAlignment="Left" Height="27" Margin="80,150,0,0" TextWrapping="Wrap" Text="07-05-2019" VerticalAlignment="Top" Width="86" TextChanged="DataTextBox_TextChanged"/>
-            <TextBox x:Name="TemperaturaTextBox" HorizontalAlignment="Left" Height="27" Margin="80,176,0,0" TextWrapping="Wrap" Text="25" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.318,-0.511" TextChanged="TemperaturaTextBox_TextChanged"/>
+            <TextBox x:Name="TemperaturaTextBox" HorizontalAlignment="Left" Height="27" Margin="80,176,0,0" TextWrapping="Wrap" Text="25,99" VerticalAlignment="Top" Width="86" RenderTransformOrigin="0.318,-0.511" TextChanged="TemperaturaTextBox_TextChanged"/>
             <Button x:Name="Add_Forecast" Content="Add forecast" HorizontalAlignment="Left" Height="22" Margin="0,208,0,0" VerticalAlignment="Top" Width="166" Click="Add_forecast_Click"/>
             <ListBox HorizontalAlignment="Left" Height="379" Margin="180,11,0,0" VerticalAlignment="Top" Width="206" ItemsSource="{Binding Items}" SelectionChanged="ListBox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Path=City}" Margin="3" Width="55"/>
-                            <TextBlock Text="{Binding Path=Time}"  Width="90" MaxHeight="60" TextWrapping="Wrap"  />
-                            <TextBlock Text="{Binding Path=Temperature}"  Margin="0" MaxWidth="20" MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Time}"  Width="80" TextWrapping="Wrap"  />
+                            <TextBlock Text="{Binding Path=Temperature}"  Margin="0"  MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Humidity}"  Margin="3"  Width="50" MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Pressure}"  Margin="3"  Width="50" MaxHeight="30"/>
+                            <TextBlock Text="{Binding Path=Windspeed}"  Margin="3" Width="50" MaxHeight="30"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListBox.ItemTemplate>
@@ -31,12 +34,15 @@
                 <ComboBoxItem Content="Berlin"></ComboBoxItem>
                 <ComboBoxItem Content="Moscow"></ComboBoxItem>
                 <ComboBoxItem Content="Prague"></ComboBoxItem>
-                <ComboBoxItem Content="Vienn"></ComboBoxItem>
+                <ComboBoxItem Content="Vienna"></ComboBoxItem>
+                <ComboBoxItem Content="London"></ComboBoxItem>
+                <ComboBoxItem Content="Void"></ComboBoxItem>
             </ComboBox>
 
         </Grid>
         <Button x:Name="download_weather_button" Content="Download weather" HorizontalAlignment="Left" Height="22" 
                 Margin="386,127,0,0" VerticalAlignment="Top" Width="167" Click="Download_weather_Click"/>
+        <TextBox x:Name="log_textbox" HorizontalAlignment="Left" Height="82" Margin="27,317,0,0" TextWrapping="Wrap" Text="Log: " VerticalAlignment="Top" Width="305"/>
 
     </Grid>
 </Window>
