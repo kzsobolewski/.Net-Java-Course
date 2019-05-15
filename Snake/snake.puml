@@ -1,0 +1,77 @@
+@startuml
+VisualObject <|-- Apple
+VisualObject <|-- Snake
+GameStage <|-- Game
+GameState <|-- Game
+Controls <|-- Game
+Snake <|-- GameStage
+Apple <|-- GameStage
+Direction <|-- Snake
+
+class VisualObject{
+    X: double
+    Y: double
+}
+class Apple{
+    Items[]: VisualObject
+
+    generate()
+    pop()
+}
+
+enum Direction{
+    UP
+    DOWN
+    RIGHT
+    LEFT
+}
+
+class Snake{
+    head: VisualObject
+    tail: VisualObject[]
+    speed: double
+    direction: Direction
+
+    boolean isDead(int stageWidth, int stageHeight)
+    update()
+}
+
+class GameStage {
+    stageWidth: int
+    stageHeight: int
+    snake: Snake
+    apples: Apple
+
+    update()
+    addSnake()
+    checkCollision()
+    clean()
+    addApple()
+    eatApple()
+}
+
+class Game{
+    stage : GameStage
+    gameState: GameState
+    controls: Controls
+    refreshRate: int
+
+    run()
+    lose()
+    restart()
+}
+
+class Controls{
+    onTouch()
+}
+
+enum GameState{
+    READY
+    RUNNING
+    LOST
+}
+
+
+
+
+@enduml
